@@ -1,9 +1,16 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <Index />
+  </div>
 </template>
 
 <script>
+import Index from "@/components/Index";
+
 export default {
-  name: "home"
+  name: "home",
+  components: {
+    Index
+  }
 };
 </script>
