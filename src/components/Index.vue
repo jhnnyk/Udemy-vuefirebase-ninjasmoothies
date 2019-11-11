@@ -17,10 +17,10 @@
 </template>
 
 <script>
-import db from "@/firebase/init";
+import db from '@/firebase/init';
 
 export default {
-  name: "Index",
+  name: 'Index',
   data() {
     return {
       smoothies: []
@@ -29,7 +29,7 @@ export default {
   methods: {
     deleteSmoothie(id) {
       // delete doc from firestore
-      db.collection("smoothies")
+      db.collection('smoothies')
         .doc(id)
         .delete()
         .then(() => {
@@ -41,7 +41,7 @@ export default {
   },
   created() {
     // fetch data from the firestore
-    db.collection("smoothies")
+    db.collection('smoothies')
       .get()
       .then(snapshot => {
         snapshot.forEach(doc => {
