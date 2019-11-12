@@ -17,6 +17,7 @@
           type="text"
           name="add-ingredient"
           @keydown.tab.prevent="addIng"
+          @keydown.enter.prevent="addIng"
           v-model="another"
         />
       </div>
